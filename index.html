@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kouros Codes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Press+Start+2P" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script src="./AnimatedLetters/js/d3-ease.v0.6.js"></script>
+  <script src="./AnimatedLetters/js/segment.min.js"></script>
+  <script src="./AnimatedLetters/js/letters.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="./index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body>
+
+<div class="main-container">
+    <div class="fancy-name">Kouros Codes</div>
+<h1>Projects</h1>
+<h4>Mail Demon</h4>
+    An email survey/feedback full stack application built with Node.js/Express, React, and MongoDB.
+
+
+
+<div class="project-container">
+  <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
+<li>
+  <div class="collapsible-header"><i class="fa fa-key" aria-hidden="true"></i>Authentication</div>
+  <div class="collapsible-body">
+    <p>Passport.js authentication middleware used with Node.js.</p>
+    <p>Google strategy configured within Passport.js to handle token based authentication flow with Google O-Auth API.</p>
+    <p>Scope access limited to user's Google ID as a means of unique user identification throughout app.</p>
+    <p>The Cookie Session NPM module used to maintain user identification within the application.  Passport.js
+      passes user information through serialization / deserialization of cookies obtained from header.</p>
+  </div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-database" aria-hidden="true"></i>Database</div>
+  <div class="collapsible-body"><p>Used MongoDB database hosted on mlab.com.</p>
+  <p>Mongoose used to create user and survey collections with accompanying schema / models / and subdocument collection.</p>
+  <p>User credits and survey data validation database queries ensure application data integrity.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-server" aria-hidden="true"></i>Server</div>
+  <div class="collapsible-body"><p>Used Node.js and Express to create backend server.</p>
+  <p>Relative routing used to ensure fluid deployments to Heroku production environment without reconfiguration.</p>
+  <p>Custom middlewares created to validate user authentication and credit allocation.</p>
+  <p>API routes receive client-side data as well as interact with Sendgrid and Stripe API services.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-usd" aria-hidden="true"></i>Billing</div>
+  <div class="collapsible-body"><p>NPM stripe and react-stripe-checkout modules used to process user payments.</p>
+  <p>Charge object created client-side and sent to server for further processing using Axios.</p>
+  <p>Stripe Node.js module used to submit charge and recieve token for charge validation.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-envelope" aria-hidden="true"></i>Mailing</div>
+  <div class="collapsible-body">
+  <p>Sendgrid used for survey mass-mailing and feedback gathering.</p>
+  <p>ngrok configured to create local tunnel for Sendgrid testing.</p>
+  <p>Webhook setup to recieve incoming survey feedback data.</p>
+  <p>Server pre-processing / filtering logic used to verify and scrub incoming data.</p>
+  <p>Sendgrid mailer service created using numerous Sendgrid module helper functions.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
+  <div class="collapsible-body"><p>create-react-app used to create foundation of React application.</p>
+  <p>Redux used to manage survey and user states contained within the Redux store.</p>
+  <p>react-router-dom handles routing between landing page, survey dashboard, and survey creation.</p>
+  <p>redux-form ensures data validation and persisting values on survey form components.</p>
+  <p>Materalize CSS framework used to provide design consistency throughout app.</p>
+</div>
+</li>
+</ul></div>
+  <div class="project-picture"><img  style="width: 100%; height: auto;" src="./img/mailerman.jpg"></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

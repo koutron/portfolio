@@ -1,0 +1,65 @@
+html {
+	font-family: 'Quicksand', cursive;
+}
+
+body {
+	margin: 0px;
+	background-color: #e8fcf1;
+}
+
+h1 {
+	font-weight: 600;
+	font-family: Poiret One;
+	color: #93dbb4;
+}
+
+/*
+.background-img {
+	overflow: hidden;
+	position: absolute;
+	bottom: 33%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	z-index: -1;
+}
+*/
+.fancy-name {
+}
+.welcome {
+	font-size: 40px;
+	font-weight: 600;
+	color: #b8f8d4;
+	font-family: 'Poiret One', cursive;
+}
+
+.main-container {
+	width: 1200px;
+	display: block;
+	background-color: white;
+	height: 100vh;
+	padding: 0 20px 0 20px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project-container {
+	margin: auto;
+	display: flex;
+}
+
+.project-info {
+	flex: 3;
+	width: 100%;
+	margin-right: 40px;
+}
+
+.project-picture {
+	flex: 2;
+	min-width: 0;
+}
+
+.collapsible {
+	margin: 0;
+}
