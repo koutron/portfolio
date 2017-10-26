@@ -4,7 +4,7 @@ $(document).ready(function() {
 		size: 200, // Font size, defined by the height of the letters (pixels)
 		weight: 3, // Font weight (pixels)
 		rounded: true, // Rounded letter endings
-		color: '#b8f8d4', // Font color
+		color: '#b8f8d4', // Font color '#b8f8d4'
 		duration: 1, // Duration of the animation of each letter (seconds)
 		delay: [0, 0.05], // Delay animation among letters (seconds)
 		fade: 1, // Fade effect duration (seconds)
@@ -15,4 +15,7 @@ $(document).ready(function() {
 	// Initializing the text (Letters parameters: container-element, options)
 	let myText = new Letters(fancyName, options);
 	myText.show(options);
+	$('.fancy-name').mouseenter(function() {
+		myText.show(options);
+	});
 });

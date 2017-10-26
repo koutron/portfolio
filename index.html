@@ -18,18 +18,27 @@
   </head>
   <body>
 
+<nav>
+  <ul class="nav-menu">
+<li>About</li>
+<li>Projects</li>
+<li>Resume</li>
+<li>Contact</li>
+</ul>
+</nav>
 <div class="main-container">
-    <div class="fancy-name">Kouros Codes</div>
+
+<div class="fancy-name">Kouros Codes</div>
 <h1>Projects</h1>
-<h4>Mail Demon</h4>
-    An email survey/feedback full stack application built with Node.js/Express, React, and MongoDB.
+<h4>Mailer Demon</h4>
+    <p>An email survey/feedback full stack application built with Node.js/Express, React, and MongoDB.  This project was built to demonstrate further back-end complexity by integrating multiple services/APIs.</p>
 
 
 
 <div class="project-container">
   <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
 <li>
-  <div class="collapsible-header"><i class="fa fa-key" aria-hidden="true"></i>Authentication</div>
+  <div class="collapsible-header active"><i class="fa fa-key" aria-hidden="true"></i>Authentication</div>
   <div class="collapsible-body">
     <p>Passport.js authentication middleware used with Node.js.</p>
     <p>Google strategy configured within Passport.js to handle token based authentication flow with Google O-Auth API.</p>
@@ -80,8 +89,89 @@
 </div>
 </li>
 </ul></div>
-  <div class="project-picture"><img  style="width: 100%; height: auto;" src="./img/mailerman.jpg"></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/mailerman.jpg"></div>
 </div>
+
+
+
+
+
+
+<h4>Weather Master Platinum Edition</h4>
+<p>A React application that displays the five day forcast of user selected locations.</p>
+
+<div class="project-container">
+  <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
+<li>
+  <div class="collapsible-header active"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
+  <div class="collapsible-body">
+    <p>create-react-app used as foundation of project.</p>
+    <p>Redux used to manage data state.  Data is retrieved and processed in the parent component and handed down to the map and chart containers to be displayed.</p>
+    <p>Action, action creator, and reducer tied to location entry submission event.</p>
+  </div>
+</li>
+
+<li>
+  <div class="collapsible-header"><i class="fa fa-area-chart" aria-hidden="true"></i>Chart</div>
+  <div class="collapsible-body">
+    <p>Victory Charts used to display temperature, humidity, and pressure data from user selected locations.</p>
+    <p>Data formatted and concatination required to display within charts.</p>
+    <p>Charts configured to display approparite axis, scale, animation, and labeling.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-map-marker" aria-hidden="true"></i>Map</div>
+  <div class="collapsible-body">
+    <p>Gmaps npm module used to display Google Map image of user selected locations.</p>
+    <p>Longitude and latitude data dervied from openweathermaps.org passed into Gmaps container to display appropriate location.</p>
+    <p>Snazzy Maps styling applied to map rendering.</p>
+</div>
+</li>
+<li>
+  <div class="collapsible-header"><i class="fa fa-plug" aria-hidden="true"></i>API</div>
+  <div class="collapsible-body">
+    <p>openweathermap.org used as source of weather information.</p>
+    <p>Axios configured to retrieve payload data from openweathermap.org.</p>
+</div>
+</li>
+</ul></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/weather.jpg"></div>
+</div>
+
+
+
+
+
+
+
+<h4>Reactube</h4>
+<p>A Youtube video viewer built with React.</p>
+<div class="project-container">
+  <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header active"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
+      <div class="collapsible-body">
+        <p>Unlike other projects, this application does not use Redux.  As the application is flat, Redux's strengths cannot be fully applied.</p>
+        <p>All data is managed through React's native component props and state.</p>
+        <p>lodash debounce NPM module used to prevent React from re-rendering too frequently upon changing search query.</p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fa fa-plug" aria-hidden="true"></i>API</div>
+      <div class="collapsible-body">
+        <p>Youtube's API (activated through the Google Developer Console) used as data source for videos and descriptions.</p>
+        <p>youtube-api-search NPM module configured to retrieve data into React.</p>
+        <p>All data relevant to the application is retrieved in the parent component's state (index.js) and passed to children containers as props.</p>
+    </div>
+    </li>
+</ul></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/reactube.jpg"></div>
+</div>
+
+
+
+
+
 </div>
 
 

@@ -6,11 +6,27 @@ body {
 	margin: 0px;
 	background-color: #e8fcf1;
 }
+nav {
+	background-color: #b8f8d4;
+	width: 1200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav-menu li {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0 20px 0 20px;
+}
 
 h1 {
 	font-weight: 600;
 	font-family: Poiret One;
 	color: #93dbb4;
+}
+
+h4 {
+	margin-top: 50px;
 }
 
 /*
@@ -25,6 +41,10 @@ h1 {
 }
 */
 .fancy-name {
+	text-align: center;
+}
+
+.letter {
 }
 .welcome {
 	font-size: 40px;
@@ -37,7 +57,7 @@ h1 {
 	width: 1200px;
 	display: block;
 	background-color: white;
-	height: 100vh;
+	height: auto;
 	padding: 0 20px 0 20px;
 
 	margin-left: auto;
@@ -62,4 +82,11 @@ h1 {
 
 .collapsible {
 	margin: 0;
+}
+
+.collapsible-header:hover {
+	background-color: #e8fcf1;
+}
+.collapsible-header.active {
+	background-color: #e8fcf1;
 }
