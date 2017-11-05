@@ -5,11 +5,71 @@ html {
 
 body {
 	margin: 0px;
-	background-color: #e8fcf1;
+
 }
 
+.main-container {
+	width: 1200px;
+	display: block;
+
+	height: auto;
+	padding: 0 20px 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.section-intro {
+  margin-top: -40px;
+}
+
+@keyframes kouros-arrow-vert-animate {
+	from {height: 0px;}
+	to {height: 200px;}
+}
+
+@keyframes kouros-arrow-hor-animate {
+
+	from {width: 0px;}
+	to {width: 350px;}
+
+}
+
+.kouros-arrow-vert {
+	  margin-left: 310px;
+    border-left: 20px solid #eec9e6;
+		height: 0px;
+		border-bottom: 20px solid #eec9e6;
+		width: 0px;
+		animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
+		animation-delay: 0s, .5s;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+}
+
+.kouros-arrow-hor {
+
+}
+
+.code-arrow {
+	display: inline;
+	  margin-left: 800px;
+    border-top: 4px solid #eec9e6;
+		width: 550px;
+
+}
+
+
+
+
+
 .img-face {
-	border-radius: 90%;
+	margin-top: 50px;
+	float: right;
+	border-radius: 50%;
+	margin-right: 15%;
+
 }
 
 .section {
@@ -17,15 +77,15 @@ body {
 }
 nav {
 	background-color: #b8f8d4;
-	width: 1200px;
+	box-shadow: none;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 .nav-menu li {
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: bold;
-	padding: 0 20px 0 20px;
+	padding: 0 40px 0 40px;
 }
 
 .fancy-name {
@@ -39,15 +99,7 @@ nav {
 	font-family: 'Poiret One', cursive;
 }
 
-.main-container {
-	width: 1200px;
-	display: block;
-	background-color: white;
-	height: auto;
-	padding: 0 20px 0 20px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 
 .project-container {
 	margin: auto;
