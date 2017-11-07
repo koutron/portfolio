@@ -24,46 +24,112 @@ body {
   padding-bottom: 150px;
 }
 
+
+
+.kouros-arrow {
+	position: absolute;
+	margin-top: -40px;
+	margin-left: 310px;
+  border-left: 20px solid #eec9e6;
+  border-bottom: 20px solid #eec9e6;
+  width: 0px;
+  animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
+  animation-delay: 0s, .5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes kouros-arrow-vert-animate {
 	from {height: 0px;}
-	to {height: 150px;}
+	to {height: 200px;}
 }
 
 @keyframes kouros-arrow-hor-animate {
 	from {width: 0px;}
-	to {width: 370px;}
+	to {width: 390px;}
 }
 
-.kouros-arrow {
-	position: absolute;
-	  margin-left: 310px;
-    border-left: 20px solid #eec9e6;
-		height: 0px;
-		border-bottom: 20px solid #eec9e6;
-		width: 0px;
-		animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
-		animation-delay: 0s, .5s;
-		animation-duration: .5s;
-		animation-fill-mode: forwards;
-}
-
-@keyframes arrowhead {
-	from {border-left: 0px}
-	to {border-left: 30px}
-
-}
-
-.arrow-right {
+.codes-arrow {
+	margin-top: -220px;
+	z-index: -1;
 	position: relative;
-	margin-left: 350px;
-	margin-top: 108px;
+	border-right: 20px solid #eec9e6;
+  border-bottom: 20px solid #eec9e6;
+	margin-left: 544px;
+	animation-name: codes-arrow-vert-animate;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes codes-arrow-vert-animate {
+	from {height: 0px;}
+	to {height: 382px}
+}
+
+.codes-arrow-hor {
+
+	position: relative;
+	z-index: -1;
+  border-right: 20px solid #eec9e6;
+	border-bottom: 20px solid #eec9e6;
+	animation-name: codes-arrow-hor-animate, codes-arrow-hor-adjust, code-arrow-display;
+	animation-duration: .5s, .5s, .6s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	margin-left: 564px;
+	margin-top: -20px;
+}
+
+@keyframes codes-arrow-hor-animate {
+  from {width: 0px;}
+	to {width: 648px;}
+}
+
+@keyframes codes-arrow-hor-adjust {
+  from {margin-left: 564px;}
+	to {margin-left: -84px;}
+}
+
+@keyframes code-arrow-display {
+	from {display: none;}
+	to {display: inline;}
+}
+
+.arrow-left {
+	position: relative;
+	margin-left: -95px;
+	margin-top: -40px;
   width: 0;
   height: 0;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   animation-name: arrowhead;
-	animation-duration: 1s;
+	animation-duration: .2s;
+	animation-delay: .85s;
+  border-right: 30px solid #eec9e6;
+	transform: scale(.01);
+	animation-fill-mode: forwards;
+}
+
+.arrow-right {
+	position: relative;
+	margin-left: 370px;
+	margin-top: 159px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  animation-name: arrowhead;
+	animation-duration: .2s;
+	animation-delay: .85s;
   border-left: 30px solid #eec9e6;
+	transform: scale(.01);
+	animation-fill-mode: forwards;
+}
+
+@keyframes arrowhead {
+	from {transform: scale(.01)}
+	to {transform: scale(1)}
 }
 
 
@@ -76,10 +142,15 @@ body {
 	float: right;
 	border-radius: 50%;
 	margin-right: 125px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+
 
 }
 
-.section {
+.projects-section {
+	margin-top: 130px;
 	font-family: Poiret One;
 }
 nav {
