@@ -6,7 +6,7 @@ $(document).ready(function() {
 		rounded: true, // Rounded letter endings
 		color: '#b8f8d4', // Font color '#b8f8d4'
 		duration: 1, // Duration of the animation of each letter (seconds)
-		delay: [0, 0.05], // Delay animation among letters (seconds)
+		delay: [0, 0.1], // Delay animation among letters (seconds)
 		fade: 1, // Fade effect duration (seconds)
 		easing: d3_ease.easeCubicInOut.ease, // Easing function
 		individualDelays: false // If false (default), every letter delay increase gradually, showing letters from left to right always. If you want to show letters in a disorderly way, set it to true, and define different delays for the desired letters.

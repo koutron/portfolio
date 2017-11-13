@@ -1,6 +1,10 @@
 html {
 	font-family: 'Quicksand', cursive;
-	font-size: 18px;
+	font-size: 20px;
+}
+
+p {
+	margin: 10px 0 10px 0;
 }
 
 body {
@@ -8,30 +12,33 @@ body {
 
 }
 
-.main-container {
-	width: 1200px;
+nav {
+	background-color: #b8f8d4;
+	box-shadow: none;
 	display: block;
-
-	height: auto;
-	padding: 0 20px 0 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
+.nav-menu li {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 0 40px 0 40px;
+}
 
-
+.fancy-name {
+	text-align: center;
+}
 
 .section-intro {
   padding-bottom: 150px;
 }
 
-
-
 .kouros-arrow {
 	position: absolute;
 	margin-top: -40px;
 	margin-left: 310px;
-  border-left: 20px solid #eec9e6;
-  border-bottom: 20px solid #eec9e6;
+  border-left: 20px solid #BBE2F5;
+  border-bottom: 20px solid #BBE2F5;
   width: 0px;
   animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
   animation-delay: 0s, .5s;
@@ -53,8 +60,8 @@ body {
 	margin-top: -220px;
 	z-index: -1;
 	position: relative;
-	border-right: 20px solid #eec9e6;
-  border-bottom: 20px solid #eec9e6;
+	border-right: 20px solid #BBE2F5;
+  border-bottom: 20px solid #BBE2F5;
 	margin-left: 544px;
 	animation-name: codes-arrow-vert-animate;
 	animation-duration: .5s;
@@ -70,8 +77,8 @@ body {
 
 	position: relative;
 	z-index: -1;
-  border-right: 20px solid #eec9e6;
-	border-bottom: 20px solid #eec9e6;
+  border-right: 20px solid #BBE2F5;
+	border-bottom: 20px solid #BBE2F5;
 	animation-name: codes-arrow-hor-animate, codes-arrow-hor-adjust, code-arrow-display;
 	animation-duration: .5s, .5s, .6s;
 	animation-delay: .5s;
@@ -82,12 +89,12 @@ body {
 
 @keyframes codes-arrow-hor-animate {
   from {width: 0px;}
-	to {width: 648px;}
+	to {width: 628px;}
 }
 
 @keyframes codes-arrow-hor-adjust {
   from {margin-left: 544px;}
-	to {margin-left: -84px;}
+	to {margin-left: -64px;}
 }
 
 @keyframes code-arrow-display {
@@ -97,7 +104,7 @@ body {
 
 .arrow-left {
 	position: relative;
-	margin-left: -95px;
+	margin-left: -75px;
 	margin-top: -40px;
   width: 0;
   height: 0;
@@ -106,7 +113,7 @@ body {
   animation-name: arrowhead;
 	animation-duration: .2s;
 	animation-delay: .85s;
-  border-right: 30px solid #eec9e6;
+  border-right: 30px solid #BBE2F5;
 	transform: scale(.01);
 	animation-fill-mode: forwards;
 }
@@ -122,7 +129,7 @@ body {
   animation-name: arrowhead;
 	animation-duration: .2s;
 	animation-delay: .85s;
-  border-left: 30px solid #eec9e6;
+  border-left: 30px solid #BBE2F5;
 	transform: scale(.01);
 	animation-fill-mode: forwards;
 }
@@ -132,52 +139,35 @@ body {
 	to {transform: scale(1)}
 }
 
-
-
-
-
-
 .img-face {
-
 	float: right;
 	border-radius: 50%;
 	margin-right: 125px;
 	border-style: solid;
 	border-width: 10px;
 	border-color: white;
+}
 
+.main-container {
+	width: 1200px;
+	display: block;
 
+	height: auto;
+	padding: 0 20px 0 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .projects-section {
 	margin-top: 130px;
 	font-family: Poiret One;
-}
-nav {
-	background-color: #b8f8d4;
-	box-shadow: none;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-.nav-menu li {
-	font-size: 22px;
-	font-weight: bold;
-	padding: 0 40px 0 40px;
+	font-size: 80px;
+	margin-bottom: 0px;
 }
 
-.fancy-name {
-	text-align: center;
+.project-name{
+	margin: 50px 0 0px 0;
 }
-
-.welcome {
-	font-size: 40px;
-	font-weight: 600;
-	color: #b8f8d4;
-	font-family: 'Poiret One', cursive;
-}
-
-
 
 .project-container {
 	margin: auto;
@@ -195,8 +185,14 @@ nav {
 	min-width: 0;
 }
 
-.collapsible {
-	margin: 0;
+
+
+.collapsible-header {
+	padding: 15px 15px 15px 15px;
+}
+
+.collapsible-body {
+	padding: 15px 25px 15px 25px;
 }
 
 .collapsible-header:hover {
@@ -205,6 +201,7 @@ nav {
 .collapsible-header.active {
 	background-color: #e8fcf1;
 }
+
 
 .job-duration{
 	float: right;
