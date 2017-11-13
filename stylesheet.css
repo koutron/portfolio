@@ -76,7 +76,7 @@ body {
 	animation-duration: .5s, .5s, .6s;
 	animation-delay: .5s;
 	animation-fill-mode: forwards;
-	margin-left: 564px;
+	margin-left: 544px;
 	margin-top: -20px;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 @keyframes codes-arrow-hor-adjust {
-  from {margin-left: 564px;}
+  from {margin-left: 544px;}
 	to {margin-left: -84px;}
 }
 
