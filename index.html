@@ -5,7 +5,7 @@
     <title>Kouros Codes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Press+Start+2P" rel="stylesheet">
-
+  <script src="./waypoints/lib/noframework.waypoints.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="./AnimatedLetters/js/d3-ease.v0.6.js"></script>
   <script src="./AnimatedLetters/js/segment.min.js"></script>
@@ -20,22 +20,18 @@
 
 <nav>
   <ul class="nav-menu">
-<li>About</li>
-<li>Projects</li>
-<li>Resume</li>
-<li>Contact</li>
+<li><a href="#projects" id="wp-projects">Projects</a></li>
+<li><a href="#resume" id="wp-resume">Resume</a></li>
+<li><a href="#about" id="wp-about">About</a></li>
+<li><a href="#contact" id="wp-contact">Contact</a></li>
 </ul>
 </nav>
 <div class="main-container">
 <div class="fancy-name">Kouros Codes</div>
 
 
-
-
-<!--<div class="intro">Two years ago I recieved my first real exposure to coding.  One evening as I was debugging a script, I laid it to rest for the day and thought to myself "I look forward to getting back to this tomorrow."
-  Moments later, I realized this was the first time in my professional career that I was truly excited about getting back to work.  I've been coding ever since. -->
 <div class="section-intro">
-<img class="img-face" src="./img/face.jpg">
+<img id="img-face" class="img-face" src="./img/face.jpg">
 <div class="kouros-arrow">
 
 <div class="arrow-right"></div>
@@ -46,13 +42,15 @@
 </div>
 </div>
 
-<h1 class="projects-section">Projects</h1>
-<p>This site and the following projects are hosted on Amazon Web Services EC2 using Ubuntu.  Two Node.js instances run on the same server; One hosts statics apps while the other runs on a different port to host the dynamic app Mailerdemon.  The npm Forever module is used to ensure continuous availability.</p>
+
+<h1 class="section" id="projects" class="test">Projects</h1>
+<p style="padding-top: 10px">This site and the following projects are hosted on virtual server I configured using Amazon Web Services EC2 and Ubuntu.
+  Two Node.js instances run on the same server; One hosts statics apps while the other runs on a different port to host the dynamic app Mailerdemon.</p>
 
 
 
 
-<h4 class="project-name">Mailerdemon</h4>
+<h4 class="project-name"><a href='mailerdemon'>Mailerdemon</a></h4>
   <p>An email survey/feedback full stack application built with Node.js/Express, React, and MongoDB.  This project was built to demonstrate further back-end complexity by integrating multiple services/APIs.</p>
 <div class="project-container">
   <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
@@ -108,7 +106,10 @@
 </div>
 </li>
 </ul></div>
-  <div class="project-picture"><img  style="width: 100%" src="./img/mailerman.jpg"></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/mailerman.jpg">
+    <div class="github"><a href="https://github.com/koutron/mailerdemon">Github</a>
+    </div>
+  </div>
 </div>
 
 
@@ -116,13 +117,13 @@
 
 
 
-<h4 class="project-name">Weather Master Platinum Edition</h4>
+<h4 class="project-name"><a href='weather'>Weather Master Platinum Edition</a></h4>
 <p>A React application that displays the five day forcast of user selected locations.</p>
 
 <div class="project-container">
   <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
 <li>
-  <div class="collapsible-header active"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
+  <div class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
   <div class="collapsible-body">
     <p>create-react-app used as foundation of project.</p>
     <p>Redux used to manage data state.  Data is retrieved and processed in the parent component and handed down to the map and chart containers to be displayed.</p>
@@ -154,7 +155,11 @@
 </div>
 </li>
 </ul></div>
-  <div class="project-picture"><img  style="width: 100%" src="./img/weather.jpg"></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/weather.jpg">
+    <div class="github"><a href="https://github.com/koutron/weather">Github</a>
+    </div>
+  </div>
+
 </div>
 
 
@@ -163,12 +168,12 @@
 
 
 
-<h4 class="project-name">Reactube</h4>
+<h4 class="project-name"><a href="reactube">Reactube</a></h4>
 <p>A Youtube video viewer built with React.</p>
 <div class="project-container">
   <div class="project-info"><ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header active"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
+      <div class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i>Client</div>
       <div class="collapsible-body">
         <p>Unlike other projects, this application does not use Redux.  As the application is flat, Redux's strengths cannot be fully applied.</p>
         <p>All data is managed through React's native component props and state.</p>
@@ -184,39 +189,48 @@
     </div>
     </li>
 </ul></div>
-  <div class="project-picture"><img  style="width: 100%" src="./img/reactube.jpg"></div>
+  <div class="project-picture"><img  style="width: 100%" src="./img/reactube.jpg">
+  <div class="github"><a href="https://github.com/koutron/rtube">Github</a></div>
+  </div>
 </div>
 
-<h4 class="project-name">freecodecamp.com API Projects</h4>
-<p>After becoming familiar with Node.js and Express, these projects helped solidify my understanding building five API microservices.</p>
-<a href="./fcc">freecodecamp.com API Projects</p> 
 
-<h1>Resume</h1>
-<h3>Profile</h3>
+<h4 class="project-name" id="freecodecamp"><a href="fcc">freecodecamp.com API Projects</a></h4>
+<p>My introduction to backend concepts and Node.js was facilated through freecodecamp.com's exercises,
+  projects, and community.  Five API microservices were built according to user story specifications.
+  The source code for these projects can be found <a href="https://github.com/koutron/fcc">here on Github.</a></p>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+
+<a id="resume"></a>
+<h1 class="section">Resume</h1>
+<h4 class="resume-section">Profile</h4>
 <p>Former IT professional turned web developer looking to apply and expand programming knowledge.
   Highly creative, strategic, and flexible working across large organizations or small teams.
   Very strong presentation, relationship building and communication skills.</p>
 
-<h3>Experience</h3>
+<h4 class="resume-section">Experience</h4>
 <h5 class="job-name">The ANA Project<span class="job-duration">2017 - Present</span></h5>
 <ul class="job-content">
-  <h6 class="job-title">Tutor</h6>
+  <p>Tutor</p>
     <li>Provide free tutoring and mentor services to underserved youths of Washington DC for SAT/ACT test preperation.</li>
 </ul>
 <h5 class="job-name">Furition Partners - A DXC Company<span class="job-duration">2014 - 2016</span></h5>
-<h6 class="job-title">Technical Consultant<span class="job-duration">2015 - 2016</span></h6>
+<p>Technical Consultant<span class="job-duration">2015 - 2016</span></p>
 <ul class="job-content">
 
   <li>Created custom solutions to fulfill business requirements using Javascript and the ServiceNow library.</li>
   <li>Lead client engagements in implementing ITIL best practices to better manage and enhance ServiceNow instances.</li>
   <li>Maintained functional and technical documentation in regards to requirements, solutions, code changes, and client communciations.</li>
-  <h6 class="job-title">IT Engineer<span class="job-duration">2014 - 2015</span></h6>
+
+  <p>IT Engineer<span class="job-duration">2014 - 2015</span></p>
   <li>Ran entire service desk, hardware, network, and cloud environments serving over 350 employees.</li>
   <li>Lead platform migration from Google to Microsoft involving SharePoint logical architecture design, communication planning, contractor management, go-live support planning, and employee training.</li>
 </ul>
 
 <h5 class="job-name">Alion Science and Technology<span class="job-duration">2011 - 2014</span></h5>
-<h6 class="job-title">Knowledge Management Analyst</h6>
+<p>Knowledge Management Analyst</p>
 <ul class="job-content">
   <li>Implemented Microsoft SharePoint solutions across enterprise to provide consolidated data management, business process automation,
   site administration/customization, portal development, and dynamic dashboard integration.</li>
@@ -226,48 +240,66 @@
   and renegotiating service provider contracts.</li>
 </ul>
 
-
-
 <h5 class="job-name">Whitener and Jackson General Contractors<span class="job-duration">2010 - 2011</span></h5>
-<h6 class="job-title">Associate Project Manager</h6>
+<p>Project Manager</p>
 
 <h5 class="job-name">Firstlight ERA<span class="job-duration">2009</span></h5>
-<h6 class="job-title">Associate Project Manager</h6>
+<p>Associate Sales Manager</p>
 
 <h5 class="job-name">Adcision Luxury Media<span class="job-duration">2007 - 2008</span></h5>
-<h6 class="job-title">Business Analyst</h6>
+<p>Business Analyst</p>
 
 
-<h3>Education</h3>
+<h4 class="resume-section">Education</h4>
 <h5 class="job-name">Virginia Polytechnic and State University<span class="job-duration">2002 - 2007</span></h5>
 <p>B.S. Economics, B.S. Biology (Concentration: Biotechnology), Chemistry Minor</p>
 
-<h3>Skills and Interests</h3>
-<ul class="job-content">
-  <li>JavaScript, Node.js, React, Git, Amazon Web Services (AWS), Python</li>
-  <li>Served as lead developer throughout entire project life cycle, involving Finance SOX auditing, HR ethics compliance,
-  and IT cyber-security training.</li>
-  <li>Reduced enterprise telecommunications spend by $354k by consolidating mobile service providers, centralizing company accounts,
-  and renegotiating service provider contracts.</li>
+<h4 class="resume-section">Skills and Interests</h4>
+<ul class="job-content" style="margin-top: 10px">
+  <li>JavaScript, Node.js, React, Git, Amazon Web Services (AWS), Python, Linux</li>
+  <li>SharePoint, ServiceNow, Salesforce</li>
+  <li>Classical pianist and electronic music producer, won high awards</li>
+  <li id="skills">Other interests include reading, biking, gadgets, football, concerts, philosophy, dogs, and podcasts</li>
+
 </ul>
 
+<!----------------------------------------------------------------------------------------------------------------->
+<h1 class="section"><a id="about"></a>About</h1>
+<p>Two years ago I decided to dedicate myself to becoming a developer after I had a career moment of clarity; At the time
+  I was still a novice programmer debugging a script for a client.  I set aside my work for the evening and thought
+  to myself "I look forward to getting back to this tomorrow."  It was a moment later I realized that this was the first time I was
+  genuinely excited about getting back to work.</p>
+
+<p>As someone who previously made excuses out of fear for not persue programming, I decided to silence future regret and emerse
+  myself in coding.  I now look for every opportunity to become a better developer and am searching for the challenging professional
+  work that can provide the means to that end.</p>
+
+<p>I currently spend my time divided between tutoring for a nonprofit in downtown D.C. and coding.  I am self-taught using knowledge available online.
+  Codeschool.com and freecodecamp.com proved to be immensely useful in organizing material in a way that cemented a foundation in the fundamentals of coding.
+  Codewars.com and hackerrank.com were great sources for exposing myself to algorithms and data structures.  As I started building applications, it was Udemy, Youtube, and stackoverflow.com that supplied the knowledge needed to advance further.
+  While at times frustrating and time consuming, I believe this approach to learning ultimately strengthened skills and understanding as the answers were
+  never handed to me.  Constant searching through videos, forums, and documentation opened up additional reinforcement and insight at every turn.</p>
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------------->
+<h1 class="section"><a id="contact"></a>Contact</h1>
+<div>
+  <a href="https://github.com/koutron"><img class="logos" src="./img/github.png"></a>
+  <a href="https://www.linkedin.com/in/kouros-mousavi-b25ba820/"><img class="logos" style="max-width: 80px" src="./img/linkedin.png"></a>
+  <a href="https://www.facebook.com/kouros.mousavi"><img class="logos" src="./img/facebook.png"></a>
+</div>
+<form action="message" method="post">
+<div class="contact-form">
+ <input></input>
+ <button>Submit</button>
 
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</form>
+   </div>
   </body>
 </html>

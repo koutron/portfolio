@@ -9,23 +9,39 @@ p {
 
 body {
 	margin: 0px;
-
 }
 
 nav {
-	background-color: #b8f8d4;
+	z-index: 2;
+	position: fixed;
+	background-color: #8BECB5;
 	box-shadow: none;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
+.nav-menu {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .nav-menu li {
-	font-size: 22px;
-	font-weight: bold;
+  font-family: Quicksand;
+	font-size: 25px;
+	font-weight: 700;
 	padding: 0 40px 0 40px;
 }
 
+.nav-menu ul li a:hover {
+	color: black;
+}
+
+.nav-menu ul li .active {
+	color: red;
+}
+
 .fancy-name {
+	padding-top: 55px;
 	text-align: center;
 }
 
@@ -35,10 +51,10 @@ nav {
 
 .kouros-arrow {
 	position: absolute;
-	margin-top: -40px;
+	margin-top: -38px;
 	margin-left: 310px;
-  border-left: 20px solid #BBE2F5;
-  border-bottom: 20px solid #BBE2F5;
+  border-left: 20px solid #b8f8d4;
+  border-bottom: 20px solid #b8f8d4;
   width: 0px;
   animation-name: kouros-arrow-vert-animate, kouros-arrow-hor-animate;
   animation-delay: 0s, .5s;
@@ -60,8 +76,8 @@ nav {
 	margin-top: -220px;
 	z-index: -1;
 	position: relative;
-	border-right: 20px solid #BBE2F5;
-  border-bottom: 20px solid #BBE2F5;
+	border-right: 20px solid #b8f8d4;
+  border-bottom: 20px solid #b8f8d4;
 	margin-left: 544px;
 	animation-name: codes-arrow-vert-animate;
 	animation-duration: .5s;
@@ -77,8 +93,8 @@ nav {
 
 	position: relative;
 	z-index: -1;
-  border-right: 20px solid #BBE2F5;
-	border-bottom: 20px solid #BBE2F5;
+  border-right: 20px solid #b8f8d4;
+	border-bottom: 20px solid #b8f8d4;
 	animation-name: codes-arrow-hor-animate, codes-arrow-hor-adjust, code-arrow-display;
 	animation-duration: .5s, .5s, .6s;
 	animation-delay: .5s;
@@ -113,7 +129,7 @@ nav {
   animation-name: arrowhead;
 	animation-duration: .2s;
 	animation-delay: .85s;
-  border-right: 30px solid #BBE2F5;
+  border-right: 30px solid #b8f8d4;
 	transform: scale(.01);
 	animation-fill-mode: forwards;
 }
@@ -129,7 +145,7 @@ nav {
   animation-name: arrowhead;
 	animation-duration: .2s;
 	animation-delay: .85s;
-  border-left: 30px solid #BBE2F5;
+  border-left: 30px solid #b8f8d4;
 	transform: scale(.01);
 	animation-fill-mode: forwards;
 }
@@ -157,13 +173,15 @@ nav {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.projects-section {
-	margin-top: 130px;
+.section {
 	font-family: Poiret One;
+	font-weight: bold;
 	font-size: 80px;
+	margin-top: 130px;
 	margin-bottom: 0px;
+	padding: 0px;
 }
+
 
 .project-name{
 	margin: 50px 0 0px 0;
@@ -181,11 +199,23 @@ nav {
 }
 
 .project-picture {
+	margin-top: 10px;
 	flex: 2;
 	min-width: 0;
 }
 
+.github{
 
+	font-size: 30px;
+}
+
+.job-name {
+	margin: 10px 0 10px 0;
+}
+.collapsible{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
 
 .collapsible-header {
 	padding: 15px 15px 15px 15px;
@@ -202,12 +232,156 @@ nav {
 	background-color: #e8fcf1;
 }
 
+.resume-section {
+	margin: 50px 0 0 0;
+
+}
 
 .job-duration{
 	float: right;
 }
 
+
+
 .job-content li{
 	list-style-type: circle !important;
 	list-style-position: inside;
+}
+
+.job-content {
+	margin: 0 0 40px 0;
+}
+
+.logos {
+	max-width: 75px;
+	height: auto;
+	margin: 50px 50px 0 0;
+
+}
+
+/* Kohana by Mary Lou from https://tympanus.net/codrops/2015/01/08/inspiration-text-input-effects/ */
+
+.input--kohana {
+	overflow: hidden;
+	background: #fff;
+}
+
+.input__field--kohana {
+	width: 100%;
+	background: transparent;
+	padding-left: 2.75em;
+	color: #6a7989;
+}
+
+.input__label--kohana {
+	position: absolute;
+	width: 100%;
+	text-align: left;
+	pointer-events: none;
+	color: #D2D2D2;
+}
+
+.input__label-content--kohana {
+	display: inline-block;
+	width: auto;
+	-webkit-transform: translate3d(-1.75em, 0, 0);
+	transform: translate3d(-1.75em, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.icon--kohana {
+	display: inline-block;
+	margin-top: 0.9em;
+	-webkit-transform: translate3d(-2em, 0, 0);
+	transform: translate3d(-2em, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__field--kohana:focus + .input__label--kohana .input__label-content--kohana,
+.input--filled .input__label-content--kohana {
+	opacity: 0;
+	-webkit-transform: translate3d(100px, 0, 0);
+	transform: translate3d(100px, 0, 0);
+}
+
+.input__label-content--kohana,
+.icon--kohana,
+.input__field--kohana:focus + .input__label--kohana .input__label-content--kohana,
+.input--filled .input__label-content--kohana {
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.input__field--kohana:focus + .input__label--kohana .icon--kohana,
+.input--filled  .icon--kohana {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: 400;
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #696969;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 150%;
 }
