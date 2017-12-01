@@ -8,37 +8,43 @@ p {
 }
 
 body {
+
+	position: relative;
 	margin: 0px;
 }
 
-nav {
+a {
+	color: #62DB97;
+}
+
+a:hover{
+	color: #21B461;
+}
+
+
+#mainNav {
 	z-index: 2;
-	position: fixed;
-	background-color: #8BECB5;
-	box-shadow: none;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-.nav-menu {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.nav-menu li {
-  font-family: Quicksand;
-	font-size: 25px;
-	font-weight: 700;
-	padding: 0 40px 0 40px;
+
+	width: 100%;
 }
 
-.nav-menu ul li a:hover {
-	color: black;
+
+.nav-link {
+	color: #8BECB5;
 }
 
-.nav-menu ul li .active {
-	color: red;
+.nav-item .active {
+	color: white;
 }
+
+.nav-item :hover {
+	color: #B8F8D4;
+}
+
+.anchor-padding {
+	padding-top: 1px;
+}
+
 
 .fancy-name {
 	padding-top: 55px;
@@ -167,7 +173,6 @@ nav {
 .main-container {
 	width: 1200px;
 	display: block;
-
 	height: auto;
 	padding: 0 20px 0 20px;
 	margin-left: auto;
@@ -185,11 +190,21 @@ nav {
 
 .project-name{
 	margin: 50px 0 0px 0;
+	font-size: 35px;
 }
 
 .project-container {
 	margin: auto;
 	display: flex;
+
+}
+
+.nav-container {
+	display: flex;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
 }
 
 .project-info {
@@ -205,7 +220,6 @@ nav {
 }
 
 .github{
-
 	font-size: 30px;
 }
 
@@ -226,10 +240,10 @@ nav {
 }
 
 .collapsible-header:hover {
-	background-color: #e8fcf1;
+	background-color: #EAFEF3;
 }
 .collapsible-header.active {
-	background-color: #e8fcf1;
+	background-color: #EAFEF3;
 }
 
 .resume-section {
@@ -256,7 +270,28 @@ nav {
 	max-width: 75px;
 	height: auto;
 	margin: 50px 50px 0 0;
-
 }
 
-/* Kohana by Mary Lou from https://tympanus.net/codrops/2015/01/08/inspiration-text-input-effects/ */
+.form-container{
+	display: flex;
+}
+
+textarea {
+	padding: 4px;
+}
+
+input:focus {
+  border-bottom-color: #8BECB5 !important;
+	border-bottom-width: 1px !important;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1.5px solid #8BECB5;
+  outline: none;
+}
+
+.btn {
+	color: #8BECB5;
+	background-color: black;
+}

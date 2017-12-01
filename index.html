@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kouros Codes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Press+Start+2P" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kouros Codes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Press+Start+2P" rel="stylesheet">
   <script src="./waypoints/lib/noframework.waypoints.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" async></script>
   <script src="./AnimatedLetters/js/d3-ease.v0.6.js"></script>
   <script src="./AnimatedLetters/js/segment.min.js"></script>
   <script src="./AnimatedLetters/js/letters.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" async></script>
-
   <script src="./index.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#mainNav">
+
+
+<div id="mainNav" class="fixed-top">
+        <ul class="nav navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="nav-container">
+          <li class="nav-item active" >
+            <a class="nav-link" href="#projects" style="padding-left: 10px">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </div>
+        </ul>
+
+  </div>
 
 
 
-<nav>
-  <ul class="nav-menu">
-<li><a href="#projects" id="wp-projects">Projects</a></li>
-<li><a href="#resume" id="wp-resume">Resume</a></li>
-<li><a href="#about" id="wp-about">About</a></li>
-<li><a href="#contact" id="wp-contact">Contact</a></li>
-</ul>
-</nav>
 <div class="main-container">
 <div class="fancy-name">Kouros Codes</div>
 
@@ -47,10 +58,15 @@
 </div>
 </div>
 
+<div id="projects" class="anchor-padding">
+<h1 class="section" class="test">Projects</h1>
+<p style="padding-top: 10px">This site and the following projects are hosted on virtual server configured using Amazon Web Services
+  EC2 and Ubuntu.  All React apps were created with create-react-app npm module provided by Facebook and are in their production
+  ready build states.  The configurations (i.e. email authentication for sending messages, Express app/router handling) can be found
+  <a href="https://github.com/koutron/aws">here on Github.</a>  The dynamic Mailerdemon app runs on a different port with
+  its own dedicated Node.js server instance.
 
-<h1 class="section" id="projects" class="test">Projects</h1>
-<p style="padding-top: 10px">This site and the following projects are hosted on virtual server I configured using Amazon Web Services EC2 and Ubuntu.
-  Two Node.js instances run on the same server; One hosts statics apps while the other runs on a different port to host the dynamic app Mailerdemon.</p>
+</p>
 
 
 
@@ -204,22 +220,22 @@
 <p>My introduction to backend concepts and Node.js was facilated through freecodecamp.com's exercises,
   projects, and community.  Five API microservices were built according to user story specifications.
   The source code for these projects can be found <a href="https://github.com/koutron/fcc">here on Github.</a></p>
-
+</div>
 
 <!------------------------------------------------------------------------------------------------------------------->
 
-<a id="resume"></a>
+<div id="resume" class="anchor-padding">
 <h1 class="section">Resume</h1>
 <h4 class="resume-section">Profile</h4>
-<p>Former IT professional turned web developer looking to apply and expand programming knowledge.
-  Highly creative, strategic, and flexible working across large organizations or small teams.
-  Very strong presentation, relationship building and communication skills.</p>
+<p>Web developer looking to leverage previous IT career skills in solving complex technical challenges as a means to professional growth.
+  Creative, strategic, and flexible working across large organizations or small teams.
+  Strong presentation, relationship building and communication skills.</p>
 
 <h4 class="resume-section">Experience</h4>
 <h5 class="job-name">The ANA Project<span class="job-duration">2017 - Present</span></h5>
 <ul class="job-content">
   <p>Tutor</p>
-    <li>Provide free tutoring and mentor services to underserved youths of Washington DC for SAT/ACT test preperation.</li>
+    <li>Provide non-profit tutoring and mentor services to underserved youths of Washington DC for SAT/ACT test preperation.</li>
 </ul>
 <h5 class="job-name">Furition Partners - A DXC Company<span class="job-duration">2014 - 2016</span></h5>
 <p>Technical Consultant<span class="job-duration">2015 - 2016</span></p>
@@ -260,56 +276,63 @@
 <p>B.S. Economics, B.S. Biology (Concentration: Biotechnology), Chemistry Minor</p>
 
 <h4 class="resume-section">Skills and Interests</h4>
-<ul class="job-content" style="margin-top: 10px">
-  <li>JavaScript, Node.js, React, Git, Amazon Web Services (AWS), Python, Linux</li>
+<ul class="job-content" style="margin: 10px 0 0 0">
+  <li>JavaScript (ES7), Node.js / Express, React, Git, Amazon Web Services (AWS), Python, Linux</li>
   <li>SharePoint, ServiceNow, Salesforce</li>
   <li>Classical pianist and electronic music producer, won high awards</li>
   <li id="skills">Other interests include reading, biking, gadgets, football, concerts, philosophy, dogs, and podcasts</li>
 
 </ul>
+</div>
 
 <!----------------------------------------------------------------------------------------------------------------->
-<h1 class="section"><a id="about"></a>About</h1>
-<p>Two years ago I decided to dedicate myself to becoming a developer after I had a career moment of clarity; At the time
-  I was still a novice programmer debugging a script for a client.  I set aside my work for the evening and thought
-  to myself "I look forward to getting back to this tomorrow."  It was a moment later I realized that this was the first time I was
-  genuinely excited about getting back to work.</p>
+<div id="about" class="anchor-padding">
+<h1 class="section"></a>About</h1>
+<p style="margin-top: 50px">Two years ago I had a career "moment of clarity."  At the time
+  I was still a novice programmer debugging a script for a client.  As I set aside my work for the evening, I thought
+  to myself "I look forward to getting back to this tomorrow."  It was a moment later I realized that this was the first time I had
+  ever been genuinely excited about getting back to work.</p>
 
 <p>As someone who previously made excuses out of fear for not persue programming, I decided to silence future regret and emerse
-  myself in coding.  I now look for every opportunity to become a better developer and am searching for the challenging professional
-  work that can provide the means to that end.</p>
+  myself in coding.  I enjoy the meditative nature of it, and my background in I.T. unexpectedly helped in the nitpicking problem solving
+ behavior required in debugging.</p>
 
-<p>I currently spend my time divided between tutoring for a nonprofit in downtown D.C. and coding.  I am self-taught using knowledge available online.
-  Codeschool.com and freecodecamp.com proved to be immensely useful in organizing material in a way that cemented a foundation in the fundamentals of coding.
-  Codewars.com and hackerrank.com were great sources for exposing myself to algorithms and data structures.  As I started building applications, it was Udemy, Youtube, and stackoverflow.com that supplied the knowledge needed to advance further.
-  While at times frustrating and time consuming, I believe this approach to learning ultimately strengthened skills and understanding as the answers were
-  never handed to me.  Constant searching through videos, forums, and documentation opened up additional reinforcement and insight at every turn.</p>
+<p>I currently spend my time divided between tutoring for a nonprofit in downtown D.C. and coding.  I am self-taught using resources available online.
+  Codeschool.com and freecodecamp.com proved to be immensely useful in structuring material in a way that cemented the fundamentals of coding.
+  Codewars.com and hackerrank.com were also great sources for exposing myself to algorithms and data structures.  As I started building applications, Udemy, Youtube, and what seemed like one fifth of the content of stackoverflow.com
+  supplied the supplemental knowledge needed to continue advancing my skills.</p>
+  <p>While at times frustrating and time consuming, I believe this approach to learning ultimately strengthened my skills and understanding in a way a classroom environment couldn't have.
+    The answers to my questions were never handed to me.  Constant searching through videos, forums, and documentation opened up additional reinforcement and insight into the ways
+    other developers solved the same problems.  It was ultimately the endless trial and error that iteratively nudged me onto the path of becoming a better and more efficent developer.</p>
 
-
+</div>
 
 
 
 
 
 <!----------------------------------------------------------------------------------------------------------------->
-<h1 class="section"><a id="contact"></a>Contact</h1>
-<div>
+<div id="contact" class="anchor-padding">
+<h1 class="section">Contact</h1>
+<div style="margin-bottom: 50px">
   <a href="https://github.com/koutron"><img class="logos" src="./img/github.png"></a>
   <a href="https://www.linkedin.com/in/kouros-mousavi-b25ba820/"><img class="logos" style="max-width: 80px" src="./img/linkedin.png"></a>
   <a href="https://www.facebook.com/kouros.mousavi"><img class="logos" src="./img/facebook.png"></a>
 </div>
-<form action="message" method="post">
+<form action="/message" method="post">
 <div>
-  <p>Email:  kamousavi@gmail.com</p>
+  <p>Email:  <a href="mailto:kamousavi@gmail.com">kamousavi@gmail.com</a><br></p>
   <p>Phone:  (703) 732 - 2717</p>
 
   <p>Or feel free to leave your information and message below: </p>
- <input placeholder="Name"></input>
- <input placeholder="Email"></input>
- <input placeholder="Phone"></input>
- <textarea rows="10" cols="50" placeholder="Message..."></textarea>
- <button>Submit</button>
-
+  <div class="form-container">
+ <input placeholder="Name" name='name' stlye="flex:1;"></input>
+ <input placeholder="Email" name='email' stlye="flex:1"></input>
+ <input placeholder="Phone" name='phone' stlye="flex:1"></input>
+ </div>
+ <textarea class="message" rows="10" cols="50" placeholder="Message..." name="message"></textarea>
+ <button class="btn btn-primary" style="margin: 10px 0 50px 0">Send</button>
+</div>
 </div>
 </form>
    </div>
