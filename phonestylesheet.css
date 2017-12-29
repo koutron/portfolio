@@ -1,0 +1,203 @@
+html {
+	font-family: 'Quicksand', cursive;
+	font-size: 20px;
+  color: purple;
+}
+
+p {
+	margin: 10px 0 10px 0;
+}
+
+body {
+
+	position: relative;
+	margin: 0px;
+}
+
+a {
+	color: #62DB97;
+}
+
+a:hover{
+	color: #21B461;
+}
+
+
+#mainNav {
+	z-index: 2;
+
+	width: 100%;
+}
+
+.nav-container {
+	display: flex;
+	width: 100%;
+  text-align: center;
+	margin: auto;
+  padding-left: 10px;
+
+}
+
+.nav-link {
+
+  padding: 12px;
+	color: #8BECB5;
+}
+
+.nav-item .active {
+	color: white;
+}
+
+.nav-item :hover {
+	color: #B8F8D4;
+}
+
+.anchor-padding {
+	padding-top: 1px;
+}
+
+
+.fancy-name {
+  text-align: center;
+	padding-top: 90px;
+
+}
+
+
+
+.img-face {
+  display: block;
+  width: 80%;
+  margin: auto;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+}
+
+.main-container {
+	width: 100%;
+	display: block;
+	height: auto;
+	padding: 0 10px 0 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.section {
+	font-family: Poiret One;
+	font-weight: bold;
+	font-size: 40px;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+
+.project-name{
+	margin: 60px 0 0px 0;
+	font-size: 25px;
+}
+
+.project-container {
+	margin: auto;
+
+
+}
+
+
+
+.project-info {
+
+	width: 100%;
+	margin-right: 20px;
+}
+
+.project-picture {
+	margin-top: 10px;
+
+	min-width: 0;
+}
+
+.github{
+	font-size: 20px;
+}
+
+.job-name {
+	margin: 10px 0 10px 0;
+}
+.collapsible{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.collapsible-header {
+	padding: 10px;
+}
+
+.collapsible-body {
+	padding: 15px 25px 15px 25px;
+}
+
+.collapsible-header:hover {
+	background-color: #EAFEF3;
+}
+.collapsible-header.active {
+	background-color: #EAFEF3;
+}
+
+.resume-section {
+	margin: 50px 0 0 0;
+  font-size: 25px;
+
+}
+
+.job-name {
+  font-size: 16px;
+}
+.job-duration{
+	float: right;
+}
+
+
+
+.job-content li{
+	list-style-type: circle !important;
+	list-style-position: inside;
+  font-size: 14px;
+}
+
+.job-content {
+	margin: 0 0 40px 0;
+}
+
+
+
+.logos {
+	max-width: 75px;
+	height: auto;
+	margin: 50px 50px 0 0;
+}
+
+.form-container{
+	display: flex;
+}
+
+textarea {
+	padding: 4px;
+}
+
+input:focus {
+  border-bottom-color: #8BECB5 !important;
+	border-bottom-width: 1px !important;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1.5px solid #8BECB5;
+  outline: none;
+}
+
+.btn {
+	color: #8BECB5;
+	background-color: black;
+}

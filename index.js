@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	let mq = window.matchMedia( "(min-width: 500px)" );
 	let fancyName = document.querySelector('.fancy-name');
 	var options = {
 		size: 200, // Font size, defined by the height of the letters (pixels)
@@ -12,11 +13,20 @@ $(document).ready(function() {
 		individualDelays: false // If false (default), every letter delay increase gradually, showing letters from left to right always. If you want to show letters in a disorderly way, set it to true, and define different delays for the desired letters.
 	};
 
-	// Initializing the text (Letters parameters: container-element, options)
+	if ($(window).width() <= 500) {
+     options.size = 60;
+  }
+ else {
+    options.size = 200;
+ }
+
 	let myText = new Letters(fancyName, options);
 	myText.show(options);
+
+
 	$('.fancy-name').mouseenter(function() {
 		myText.show(options);
 	});
+	
 
 });
